@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeThanhTungWPF", "LeThanhTungWPF\LeThanhTungWPF.csproj", "{D7ECC51F-CDEC-444D-B6E3-BFEEC29B26DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{50912D30-38C2-49B7-8772-459800C717ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{72A8901B-5821-4438-8709-537CE9134789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7ECC51F-CDEC-444D-B6E3-BFEEC29B26DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7ECC51F-CDEC-444D-B6E3-BFEEC29B26DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7ECC51F-CDEC-444D-B6E3-BFEEC29B26DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7ECC51F-CDEC-444D-B6E3-BFEEC29B26DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50912D30-38C2-49B7-8772-459800C717ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50912D30-38C2-49B7-8772-459800C717ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50912D30-38C2-49B7-8772-459800C717ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50912D30-38C2-49B7-8772-459800C717ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A8901B-5821-4438-8709-537CE9134789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A8901B-5821-4438-8709-537CE9134789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A8901B-5821-4438-8709-537CE9134789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A8901B-5821-4438-8709-537CE9134789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C358DBD5-062D-4BFB-BE43-19DD5CA5CF23}
+	EndGlobalSection
+EndGlobal

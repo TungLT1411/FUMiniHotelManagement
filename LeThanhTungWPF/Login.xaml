@@ -1,0 +1,21 @@
+﻿<Window x:Class="LeThanhTungWPF.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LeThanhTungWPF"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Grid>
+        <Label Content="Login FU Mini Hotel" HorizontalAlignment="Left" Margin="269,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="150,147,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="269,147,0,0" TextWrapping="Wrap" Name="txtEmail" VerticalAlignment="Top" Width="378" Height="30" FontSize="18"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="150,217,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="269,217,0,0" Name="txtPassword" VerticalAlignment="Top" Width="378" Height="30" FontSize="18"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="269,291,0,0" VerticalAlignment="Top" Height="36" Width="106" FontSize="18" Click="btnLogin"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="541,291,0,0" VerticalAlignment="Top" Height="36" Width="106" FontSize="18"/>
+        
+        
+
+    </Grid>
+</Window>
