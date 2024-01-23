@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ycwbJVte3Xehpqq1C295DwuYlsRUOYb4sC4NyT/j5hoW6d+XdMYQRnbS/UVjFX9Hva/HzqM8z2sAsJSe3MiMXA==",
+  "dgSpecHash": "YkDF+0NOLkREs75LLiO/L3wSEhFbts6LNz6OmJiLAreSRoZ5wMsyGk48Xon1SOm7Yo0thra73UatFUy02XrAVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ROG\\Documents\\FPT University\\OJT_NET07\\LeThanhTung_NET1714_A01\\LeThanhTungWPF\\LeThanhTungWPF.csproj",
+  "projectFilePath": "C:\\Users\\ROG\\Documents\\GitHub\\FUMiniHotelManagement\\LeThanhTungWPF\\LeThanhTungWPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ROG\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ROG\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

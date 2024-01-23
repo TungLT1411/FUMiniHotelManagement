@@ -82,9 +82,66 @@ namespace LeThanhTungWPF
             return numberList;
         }
 
-        private void btnSave_Click(object sender, RoutedEventArgs e)
+        private async void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            var roomId = _room.RoomId;
+            var RoomNumber = txtRoomNumber.Text;
+            var Desciption = txtDescription.Text;
+            var Price = txtPrice.Text;
+            var Capacity = selectedCapacity;
+            var RoomTypeId = CbbRoomType.SelectedValue != null ? Convert.ToInt32(CbbRoomType.SelectedValue) : 0;
+            byte Status = (byte)(ckbStatus.IsChecked ?? false ? 1 : 0);
 
+
+            if (ValidateInput(RoomNumber, Desciption, RoomTypeId))
+            {
+                if (decimal.TryParse(Price, out var RoomPrice))
+                {
+
+                    RoomInformation newRoom = new RoomInformation
+                    {
+                        RoomId = roomId,
+                        RoomNumber = RoomNumber,
+                        RoomDetailDescription = Desciption,
+                        RoomMaxCapacity = Capacity,
+                        RoomPricePerDay = RoomPrice,
+                        RoomTypeId = RoomTypeId,
+                        RoomStatus = Status
+                    };
+
+                    var check = await roomInformationObject.UpdateRoom(newRoom);
+                    if (check)
+                    {
+                        MessageBox.Show("Room updated successfully.", "Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Room updated failed!!! Please Try Again.", "Failed");
+                    }
+                }
+            }
+        }
+
+        private bool ValidateInput(string RoomNumber, string Description, int RoomTypeId)
+        {
+            if (string.IsNullOrEmpty(RoomNumber))
+            {
+                MessageBox.Show("Please enter a RoomNumber.", "Error");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(Description))
+            {
+                MessageBox.Show("Please enter a description.", "Error");
+                return false;
+            }
+            if (RoomTypeId == 0)
+            {
+                MessageBox.Show("Please select a room type.", "Error");
+                return false;
+            }
+
+            return true;
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
@@ -119,5 +176,7 @@ namespace LeThanhTungWPF
             CbbCapacity.SelectedItem = _room.RoomMaxCapacity;
             CbbRoomType.SelectedItem = RoomType.FirstOrDefault(item => item.RoomTypeId == _room.RoomTypeId);
         }
+
+
     }
 }

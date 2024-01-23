@@ -13,3 +13,4 @@ C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\BLL\obj\
 C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\BLL\bin\Debug\net6.0\DAL.dll
 C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\BLL\bin\Debug\net6.0\DAL.pdb
 C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\BLL\bin\Debug\net6.0\appsettings.json

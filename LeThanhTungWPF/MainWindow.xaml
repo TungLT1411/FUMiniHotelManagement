@@ -140,7 +140,7 @@
                             <Button Style="{DynamicResource ButtonItem}" Content="Delete" HorizontalAlignment="Left" Margin="717,42,0,0" VerticalAlignment="Top" Height="23" Width="63" Click="ButtonDelete_Click"/>
                             <Button Style="{DynamicResource ButtonItem}" Content="Search" HorizontalAlignment="Left" Margin="300,45,0,0" VerticalAlignment="Top" Height="19" Width="49" Click="ButtonSearch_Click"/>
                             <Button Style="{DynamicResource ButtonItem}" Content="Update" HorizontalAlignment="Left" Margin="636,42,0,0" VerticalAlignment="Top" Height="23" Width="63" Click="ButtonUpdate_Click"/>
-                            <Button Style="{DynamicResource ButtonItem}" Content="Add" Name="btnAddCustomer"  HorizontalAlignment="Left" Margin="556,42,0,0" VerticalAlignment="Top" Height="23" Width="63" Click="btnAddCustomer_Click"/>
+                            <Button Style="{DynamicResource ButtonItem}" Content="Add" Name="btnAddCustomer"  HorizontalAlignment="Left" Margin="556,42,0,0" VerticalAlignment="Top" Height="23" Width="63"/>
                             <TextBox Name="txtSearchCutomer" TextWrapping="Wrap" FontSize="12" FontWeight="Normal" VerticalContentAlignment="Center" VerticalAlignment="Top" Padding="5 5" Margin="0,42,506,0">
                                 <TextBox.Template>
                                     <ControlTemplate TargetType="TextBox">
@@ -202,31 +202,38 @@
 
                     <TabItem Header="Home 2" Style="{DynamicResource TabItemStyle}">
                         <Grid>
-                            <TextBlock Text ="Home 2"
-                                   Foreground="{DynamicResource SecondaryTextColor}"
+                            <TextBlock Text ="Room Reservation List"
+                                   Foreground="Black"
                                    FontSize="20"
                                    FontWeight="Bold"
-                                   VerticalAlignment="Center"
+                                   VerticalAlignment="Top"
                                    HorizontalAlignment="Center">
-
                             </TextBlock>
+
+                            <DataGrid  
+                                Name="orderDataGrid" 
+                                FontSize="12"
+                                FontWeight="Normal"
+                                AutoGenerateColumns="True" 
+                                Loaded="customerDataGrid_Loaded" Margin="0,82,0,0"/>
+
+                            <Button Style="{DynamicResource ButtonItem}" Content="Delete" HorizontalAlignment="Left" Margin="717,42,0,0" VerticalAlignment="Top" Height="23" Width="63" Click="ButtonDelete_Click"/>
+                            <Button Style="{DynamicResource ButtonItem}" Content="Search" HorizontalAlignment="Left" Margin="300,45,0,0" VerticalAlignment="Top" Height="19" Width="49" Click="ButtonSearch_Click"/>
+                            <Button Style="{DynamicResource ButtonItem}" Content="Update" HorizontalAlignment="Left" Margin="636,42,0,0" VerticalAlignment="Top" Height="23" Width="63" Click="ButtonUpdate_Click"/>
+                            <Button Style="{DynamicResource ButtonItem}" Content="Add" Name="btnAddOrder"  HorizontalAlignment="Left" Margin="556,42,0,0" VerticalAlignment="Top" Height="23" Width="63" />
+                            <TextBox Name="txtSearchOrder" TextWrapping="Wrap" FontSize="12" FontWeight="Normal" VerticalContentAlignment="Center" VerticalAlignment="Top" Padding="5 5" Margin="0,42,506,0">
+                                <TextBox.Template>
+                                    <ControlTemplate TargetType="TextBox">
+                                        <Border CornerRadius="5" BorderThickness="0.5" BorderBrush="Black"  Background="{TemplateBinding Background}">
+                                            <ScrollViewer x:Name="PART_ContentHost"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </TextBox.Template>
+                            </TextBox>
                         </Grid>
 
                     </TabItem>
 
-                    <TabItem Header="Home 3" Style="{DynamicResource TabItemStyle}">
-                        <Grid>
-                            <TextBlock Text ="Home 3"
-                                   Foreground="{DynamicResource SecondaryTextColor}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   VerticalAlignment="Center"
-                                   HorizontalAlignment="Center">
-
-                            </TextBlock>
-                        </Grid>
-
-                    </TabItem>
 
                 </TabControl>
 

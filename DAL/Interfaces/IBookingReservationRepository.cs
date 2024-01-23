@@ -1,4 +1,5 @@
 ﻿using DAL.Models;
+using DAL.ModelsDTOs;
 using DAL.Repository;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace DAL.Interfaces
 {
     public interface IBookingReservationRepository
     {
-        public Task<ICollection<BookingReservation>> GetList();
+        Task<ICollection<BookingReservationDTO>> GetList();
         Task<BookingReservation> GetById(int id);
         Task<bool> Delete(int id);
         Task<bool> Add(BookingReservation reservation);

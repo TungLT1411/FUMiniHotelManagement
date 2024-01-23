@@ -78,7 +78,7 @@
             <!-- Dòng cố định cho Button -->
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Label Content="Update Customer Information" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Update Customer Information" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Margin="104,0,0,0"/>
 
         <!-- ID and Status -->
         <Label Content="Status" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Margin="293,2,0,0"/>
@@ -112,6 +112,6 @@
         <!-- Button -->
         <Button Style="{DynamicResource ButtonItem}" Name="btnSave" Content="Save" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="79" Margin="121,0,0,0" Click="btnSave_Click"/>
         <Button Style="{DynamicResource ButtonItem}" Name="btnCancel" Content="Cancel" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,0,0,0" Height="25" Width="81" Click="btnCancel_Click"/>
-       
+
     </Grid>
 </Window>

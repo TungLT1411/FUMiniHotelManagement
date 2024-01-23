@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w/hDcRYgwExaqJEHPsO92Kb6j5K0MG8KLMwLu7m7egDIu86WM3Y09qzdk9gK6YA9QQEAAYj7LSez5PgDhjTAqw==",
+  "dgSpecHash": "sGvSB7VKYclMTdtSrjnDH3UcYLiZCPuh4ST8fdFGKRbQpWg7XvfJGzFxj++XvDQI81D63uDYuX6vCOv+tm+98g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ROG\\Documents\\FPT University\\OJT_NET07\\LeThanhTung_NET1714_A01\\DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Users\\ROG\\Documents\\GitHub\\FUMiniHotelManagement\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ROG\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ROG\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

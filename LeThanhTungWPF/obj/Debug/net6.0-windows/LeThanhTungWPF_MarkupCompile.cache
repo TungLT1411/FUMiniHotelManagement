@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\App.xaml
-6498598081
+8-670870968
 
-81109376172
+10117131985
 2221123374134
-Login.xaml;MainWindow.xaml;WindowAddCustomer.xaml;WindowAddRoom.xaml;WindowUpdateCustomer.xaml;WindowUpdateRoom.xaml;
+Login.xaml;MainWindow.xaml;WindowAddCustomer.xaml;WindowAddRoom.xaml;WindowBookingDetail.xaml;WindowMainCustomer.xaml;WindowUpdateCustomer.xaml;WindowUpdateRoom.xaml;
 
 False
 

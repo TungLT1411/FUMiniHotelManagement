@@ -117,7 +117,7 @@ namespace LeThanhTungWPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/LeThanhTungWPF;component/windowaddcustomer.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/LeThanhTungWPF;V1.0.0.0;component/windowaddcustomer.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\WindowAddCustomer.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

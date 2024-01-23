@@ -13,6 +13,7 @@ namespace DAL.Interfaces
     {
         Task<ICollection<RoomInformationDTO>> GetListWithType();
         Task<ICollection<RoomInformation>> GetList();
+        Task<ICollection<RoomInformationDTO>> GetListRoomAvailabel(DateTime startDate, DateTime endDate, int Roomtype);
         Task<ICollection<RoomInformationDTO>> SearchRoom(string keySearch);
         Task<RoomInformation> GetById(int id);
         Task<bool> Delete(int id);

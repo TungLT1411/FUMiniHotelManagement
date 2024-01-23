@@ -24,6 +24,12 @@ namespace BLL
 
              return ListCustomer;
         }
+        public async Task<ICollection<RoomInformationDTO>> GetRoomListAvailable(DateTime startDate, DateTime endDate, int roomTypeId)
+        {
+            var ListCustomer = await roomInformationRepository.GetListRoomAvailabel(startDate,endDate,roomTypeId);
+
+            return ListCustomer;
+        }
         public async Task<RoomInformation> GetRoomById(int id)
         {
             var ListCustomer = await roomInformationRepository.GetById(id);
@@ -38,6 +44,11 @@ namespace BLL
         public async Task<bool> AddRoom(RoomInformation room)
         {
             var ListRoom = await roomInformationRepository.Add(room);
+            return ListRoom;
+        }
+        public async Task<bool> UpdateRoom(RoomInformation room)
+        {
+            var ListRoom = await roomInformationRepository.Update(room);
             return ListRoom;
         }
         public async Task<bool> RemoveRoom(int id)

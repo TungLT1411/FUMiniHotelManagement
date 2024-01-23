@@ -37,6 +37,26 @@ namespace DAL.Repository
             }).ToListAsync();
         }
 
+        public async Task<ICollection<RoomInformationDTO>> GetListRoomAvailabel(DateTime startDate, DateTime endDate, int roomTypeId)
+        {
+            return await _context.RoomInformations.Include(e => e.RoomType).Include(e=>e.BookingDetails).Where(room => room.RoomTypeId == roomTypeId
+                               || room.BookingDetails.All(booking =>
+                                   endDate <= booking.StartDate || startDate >= booking.EndDate))
+                .Select(info => new RoomInformationDTO
+                {
+                    RoomId = info.RoomId,
+                    RoomNumber = info.RoomNumber,
+                    RoomDetailDescription = info.RoomDetailDescription,
+                    RoomMaxCapacity = info.RoomMaxCapacity,
+                    RoomTypeId = info.RoomTypeId,
+                    RoomStatus = info.RoomStatus,
+                    RoomPricePerDay = info.RoomPricePerDay,
+                    RoomTypeName = info.RoomType != null ? info.RoomType.RoomTypeName : null,
+                    TypeDescription = info.RoomType != null ? info.RoomType.TypeDescription : null,
+                    TypeNote = info.RoomType != null ? info.RoomType.TypeNote : null
+                }).ToListAsync();
+        }
+
         public async Task<ICollection<RoomInformationDTO>> SearchRoom(string keySearch)
         {
             return await _context.RoomInformations.Include(e => e.RoomType).Select(info => new RoomInformationDTO
@@ -72,8 +92,35 @@ namespace DAL.Repository
         }
         public async Task<bool>  Update(RoomInformation RoomInformation)
         {
-            _context.RoomInformations.Update(RoomInformation);
-            return await _context.SaveChangesAsync() > 0 ? true : false;
+
+            try
+            {
+                var existingRoom = await _context.RoomInformations.FirstOrDefaultAsync(e => e.RoomId == RoomInformation.RoomId);
+                if (existingRoom != null)
+                {
+                    existingRoom.RoomMaxCapacity = RoomInformation.RoomMaxCapacity;
+                    existingRoom.RoomNumber = RoomInformation.RoomNumber;
+                    existingRoom.RoomDetailDescription = RoomInformation.RoomDetailDescription;
+                    existingRoom.RoomPricePerDay = RoomInformation.RoomPricePerDay;
+                    existingRoom.RoomTypeId = RoomInformation.RoomTypeId;
+                    existingRoom.RoomStatus = RoomInformation.RoomStatus;
+
+                    _context.RoomInformations.Update(existingRoom);
+                    return await _context.SaveChangesAsync() > 0 ? true : false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+
+/*            _context.RoomInformations.Update(RoomInformation);
+            return await _context.SaveChangesAsync() > 0 ? true : false;*/
 
         }
         public async Task<bool> Delete(int id)

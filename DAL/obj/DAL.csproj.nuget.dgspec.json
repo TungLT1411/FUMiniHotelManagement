@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ROG\\Documents\\FPT University\\OJT_NET07\\LeThanhTung_NET1714_A01\\DAL\\DAL.csproj": {}
+    "C:\\Users\\ROG\\Documents\\GitHub\\FUMiniHotelManagement\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ROG\\Documents\\FPT University\\OJT_NET07\\LeThanhTung_NET1714_A01\\DAL\\DAL.csproj": {
+    "C:\\Users\\ROG\\Documents\\GitHub\\FUMiniHotelManagement\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG\\Documents\\FPT University\\OJT_NET07\\LeThanhTung_NET1714_A01\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\FUMiniHotelManagement\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\ROG\\Documents\\FPT University\\OJT_NET07\\LeThanhTung_NET1714_A01\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\FUMiniHotelManagement\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG\\Documents\\FPT University\\OJT_NET07\\LeThanhTung_NET1714_A01\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\FUMiniHotelManagement\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",

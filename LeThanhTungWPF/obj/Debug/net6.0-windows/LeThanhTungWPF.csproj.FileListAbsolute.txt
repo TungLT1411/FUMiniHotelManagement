@@ -70,3 +70,8 @@ C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhT
 C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\obj\Debug\net6.0-windows\WindowAddRoom.baml
 C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\obj\Debug\net6.0-windows\WindowUpdateRoom.g.cs
 C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\obj\Debug\net6.0-windows\WindowUpdateRoom.baml
+C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\obj\Debug\net6.0-windows\WindowBookingDetail.g.cs
+C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\obj\Debug\net6.0-windows\WindowBookingDetail.baml
+C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\obj\Debug\net6.0-windows\WindowMainCustomer.g.cs
+C:\Users\ROG\Documents\FPT University\OJT_NET07\LeThanhTung_NET1714_A01\LeThanhTungWPF\obj\Debug\net6.0-windows\WindowMainCustomer.baml

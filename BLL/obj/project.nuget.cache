@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fryTOLX+y0aGlZYGt4tAoDG4I95Xhv5W4+5Uzr/ZxQry1bJwbOaZ+NTMIlj2OLVBvBC48qtIXhjWTRJb0ZttZQ==",
+  "dgSpecHash": "NWHf3rDm52Ocihzp6iPOWgSdttLAazpBv1t0rLyv/GGvA9BQ9sonnAVkxsHeeONmxjO0GOR6YMsZzw7WZyV4PA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ROG\\Documents\\FPT University\\OJT_NET07\\LeThanhTung_NET1714_A01\\BLL\\BLL.csproj",
+  "projectFilePath": "C:\\Users\\ROG\\Documents\\GitHub\\FUMiniHotelManagement\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ROG\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ROG\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

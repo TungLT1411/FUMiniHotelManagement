@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace LeThanhTungWPF
 {
@@ -96,6 +97,31 @@ namespace LeThanhTungWPF
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
+        }
+
+        private void PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            // Chỉ cho phép nhập số
+            e.Handled = !IsTextAllowed(e.Text);
+        }
+
+        private void txtPrice_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Xác nhận giá trị là số
+            if (!int.TryParse(textBox.Text, out int result))
+            {
+                MessageBox.Show("Vui lòng nhập một giá trị số.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                textBox.Text = ""; // hoặc có thể đặt giá trị khác tùy ý
+            }
+        }
+
+        private bool IsTextAllowed(string text)
+        {
+            // Kiểm tra xem văn bản chỉ chứa số không
+            Regex regex = new Regex("[^0-9]+");
+            return !regex.IsMatch(text);
         }
     }
 }

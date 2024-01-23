@@ -18,14 +18,10 @@ namespace BLL
             customerRepository = new CustomerRepository();
         }
 
-        public async Task<bool> Login(string email, string password)
+        public async Task<Customer> Login(string email, string password)
         {
-            var checkLogin = await customerRepository.Login(email, password);
-            if (checkLogin != null)
-            {
-                return true;
-            }
-            return false;
+            return await customerRepository.Login(email, password);
+
         }
 
         public async Task<ICollection<Customer>> GetCustomerList()

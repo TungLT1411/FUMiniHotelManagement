@@ -16,6 +16,12 @@
     <Compile Update="WindowAddRoom.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WindowBookingDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowMainCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WindowUpdateCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +40,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WindowAddRoom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowBookingDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowMainCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WindowUpdateCustomer.xaml">

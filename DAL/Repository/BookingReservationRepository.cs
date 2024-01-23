@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using DAL.ModelsDTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,31 +13,39 @@ namespace DAL.Repository
     public class BookingReservationRepository : IBookingReservationRepository
     {
         private readonly FUMiniHotelManagementContext _context;
-        public BookingReservationRepository(FUMiniHotelManagementContext context)
+        public BookingReservationRepository()
         {
-            _context = context;
+            _context = new FUMiniHotelManagementContext();
         }
 
-        async Task<ICollection<BookingReservation>> IBookingReservationRepository.GetList()
+        public async Task<ICollection<BookingReservationDTO>> GetList()
         {
-            return await _context.BookingReservations.ToListAsync();
+            return await _context.BookingReservations.Include(e=>e.Customer).Include(p=>p.BookingDetails).Select(order => new BookingReservationDTO
+            {
+                BookingReservationId = order.BookingReservationId,
+                BookingDate = order.BookingDate,
+                BookingStatus = order.BookingStatus,
+                CustomerName = order.Customer.CustomerFullName,
+                Telephone  = order.Customer.Telephone,
+                TotalPrice = order.TotalPrice
+            }).ToArrayAsync();
         }
-        async Task<BookingReservation> IBookingReservationRepository.GetById(int id)
+        public async Task<BookingReservation> GetById(int id)
         {
             return await _context.BookingReservations.FirstOrDefaultAsync(a => a.BookingReservationId == id);
         }
-        async Task<bool> IBookingReservationRepository.Add(BookingReservation BookingReservation)
+        public async Task<bool> Add(BookingReservation BookingReservation)
         {
             _context.BookingReservations.Add(BookingReservation);
             return await _context.SaveChangesAsync() > 0 ? true : false;
         }
-        async Task<bool> IBookingReservationRepository.Update(BookingReservation BookingReservation)
+        public async Task<bool> Update(BookingReservation BookingReservation)
         {
             _context.BookingReservations.Update(BookingReservation);
             return await _context.SaveChangesAsync() > 0 ? true : false;
 
         }
-        async Task<bool> IBookingReservationRepository.Delete(int id)
+        public async Task<bool> Delete(int id)
         {
             var _exisitngBookingReservation = await _context.BookingReservations.FirstOrDefaultAsync(a => a.BookingReservationId == id);
 

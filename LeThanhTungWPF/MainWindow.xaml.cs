@@ -27,11 +27,13 @@ namespace LeThanhTungWPF
     {
         private readonly CustomerObject customerObject;
         private readonly RoomInformationObject roomInformation;
+        private readonly BookingReservationObject bookingReservationObject;
         public MainWindow()
         {
             InitializeComponent();
             customerObject = new CustomerObject();
             roomInformation = new RoomInformationObject();
+            bookingReservationObject = new BookingReservationObject();
         }
 
 
@@ -45,15 +47,13 @@ namespace LeThanhTungWPF
             ICollection<Customer> customers = await customerObject.GetCustomerList();
             customerDataGrid.ItemsSource = customers;
             
-            try
-            {
-                var roomInfoList = await roomInformation.GetRoomListWithType();
-                roomInfoDataGrid.ItemsSource = roomInfoList;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+            var roomInfoList = await roomInformation.GetRoomListWithType();
+            roomInfoDataGrid.ItemsSource = roomInfoList;
+            
+            var orderList = await bookingReservationObject.GetOrderList();
+            orderDataGrid.ItemsSource = orderList;
+
+
         }
 
         private void customerDataGrid_Loaded(object sender, RoutedEventArgs e)
